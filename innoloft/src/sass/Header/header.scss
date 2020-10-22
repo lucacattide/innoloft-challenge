@@ -1,6 +1,7 @@
 // SCSS Start
 // Imports Start
 @import '../base';
+@import 'hamburgers/_sass/hamburgers/hamburgers.scss';
 @import 'hacks';
 // Imports End
 
@@ -8,6 +9,14 @@
 .header {
   background-color: $blue;
   flex-direction: column;
+
+  @media ($media-desktop) {
+    padding: 0 0 0 16px;
+  }
+
+  @media (min-width: 1920px) {
+    padding: 0;
+  }
 
   &,
   &#{__container},
@@ -22,7 +31,12 @@
 
     @extend %container;
 
-    padding: 0 16px;
+    .container__hamburger {
+
+      @media ($media-desktop) {
+        display: none;
+      }
+    }
 
     .container__link {
       display: block;
@@ -39,7 +53,18 @@
         @extend %background;
 
         background-image: url('/img/logo-innoloft-1.svg');
-        padding: 0 0 2em;
+        max-width: 77px;
+        padding: 0 0 1.2em;
+
+        @media ($media-smartphone) {
+          max-width: 117px;
+          padding: 0 0 1.8em;
+        }
+
+        @media ($media-desktop) {
+          max-width: none;
+          padding: 0 0 2em;
+        }
       }
     }
 
@@ -70,7 +95,12 @@
       }
 
     .container__search {
+      display: none;
       max-width: 480px;
+
+      @media ($media-smartphone) {
+        display: block;
+      }
 
       &,
       .search__field {
