@@ -3,25 +3,25 @@
   "name": "Innoloft",
   "icons": [
     {
-      "src": "favocon.ico",
+      "src": "/img/favocon.ico",
       "type": "image/x-icon",
       "sizes": "48x48",
       "purpose": "any maskable"
     },
     {
-      "src": "favocon-16x16.png",
+      "src": "/img/favocon-16x16.png",
       "type": "image/png",
       "sizes": "16x16",
       "purpose": "any maskable"
     },
     {
-      "src": "favocon-32x32.png",
+      "src": "/img/favocon-32x32.png",
       "type": "image/png",
       "sizes": "32x32",
       "purpose": "any maskable"
     },
     {
-      "src": "favicon-180x180.png",
+      "src": "/img/favicon-180x180.png",
       "type": "image/png",
       "sizes": "180x180",
       "purpose": "any maskable"
