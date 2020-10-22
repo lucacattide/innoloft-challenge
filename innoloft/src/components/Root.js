@@ -8,6 +8,8 @@ import {
 } from '@reduxjs/toolkit';
 import appReducer from '../reducers/index';
 import App from './App';
+import Menu from './Menu';
+import Profile from './Profile';
 
 // App store instantiation
 const store = configureStore({
@@ -20,7 +22,10 @@ const store = configureStore({
 const Root = () => {
   return (
     <Provider store={store}>
-      <App />
+      <App>
+        <Menu />
+        <Profile />
+      </App>
     </Provider>
   );
 };

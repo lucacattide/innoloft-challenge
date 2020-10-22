@@ -7,13 +7,11 @@ import {
 } from 'react-redux';
 import Header from './Header';
 import Notification from './Notification';
-import Menu from './Menu';
-import Profile from './Profile';
 // SASS imports
 import '../sass/App/app.scss';
 
 // App
-const App = () => {
+const App = (props) => {
   const {
     notification
   } = useSelector(state => ({
@@ -26,8 +24,7 @@ const App = () => {
       <Notification message={notification} />
       <div className="app">
         <div className="app__container">
-          <Menu />
-          <Profile />
+          {props.children}
         </div>
       </div>
     </>
