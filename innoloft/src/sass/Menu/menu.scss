@@ -6,9 +6,12 @@
 
 // Main Menu
 .menu {
-  border-right: 3px solid $blue;
-  flex: 0 0 19%;
   flex-direction: column;
+
+  @media ($media-desktop) {
+    border-right: 3px solid $blue;
+    flex: 0 0 19%;
+  }
 
   &,
   &#{__main} .main__list .list__voice .voice__link {
@@ -16,10 +19,31 @@
   }
 
   &#{__main} {
+    margin: 0 0 2em;
+
+    @media ($media-desktop) {
+      margin: 0;
+    }
 
     .main__list {
+      height: auto;
       margin: 0;
+      max-height: 0;
+      overflow: hidden;
       padding: 0;
+
+      @media ($media-desktop) {
+        max-height: none;
+      }
+
+      &.active {
+        max-height: 264px;
+      }
+
+      &,
+      .list__voice .voice__link {
+        transition: all .3s ease-in-out;
+      }
 
       .list__voice {
         list-style: none;
@@ -31,9 +55,14 @@
           align-items: center;
           color: $black;
           font-size: $list;
+          justify-content: center;
           padding: 1em 16px;
           text-transform: capitalize;
           transition: all .3s ease-in-out;
+
+          @media ($media-desktop) {
+            justify-content: flex-start;
+          }
 
           &:hover {
             background-color: $grey-1;
