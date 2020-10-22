@@ -1,0 +1,51 @@
+// SCSS Start
+// Imports Start
+@import '../base';
+@import 'hacks';
+// Imports End
+
+// Main Menu
+.menu {
+  border-right: 3px solid $blue;
+  flex: 0 0 19%;
+  flex-direction: column;
+
+  &,
+  &#{__main} .main__list .list__voice .voice__link {
+    display: flex;
+  }
+
+  &#{__main} {
+
+    .main__list {
+      margin: 0;
+      padding: 0;
+
+      .list__voice {
+        list-style: none;
+
+        .voice__link {
+
+          @extend %font;
+
+          align-items: center;
+          color: $black;
+          font-size: $list;
+          padding: 1em 16px;
+          text-transform: capitalize;
+          transition: all .3s ease-in-out;
+
+          &:hover {
+            background-color: $grey-1;
+          }
+
+          .link__icon {
+            margin: 0 16px 0 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// SCSS End
