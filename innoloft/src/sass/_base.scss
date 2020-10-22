@@ -36,14 +36,10 @@ $media-smartphone: 'min-width: #{$smartphone}';
 $media-local: 'display-mode: standalone';
 
 // Classes
-%cover,
-%background,
-%sprites {
+%background {
 
   @extend %background-base;
-}
 
-%background {
   background-position: 0 0;
   background-size: 100%;
 }
@@ -65,11 +61,6 @@ $media-local: 'display-mode: standalone';
   width: 100%;
 }
 
-%cover {
-  background-position: center;
-  background-size: cover;
-}
-
 %font {
   font-family: $body;
 }
@@ -81,22 +72,11 @@ $media-local: 'display-mode: standalone';
   font-weight: bold;
 }
 
-%image {
-  height: auto;
-  width: 100%;
-}
-
-%uppercase {
-  text-transform: uppercase;
-}
-
 // General
 // Links
 a {
   text-decoration: none !important;
 }
-
-a:active a:focus {}
 
 // Outline
 a:focus,
@@ -112,31 +92,9 @@ input[type='submit'] {
   border-radius: 0 !important;
 }
 
-// Layout
-.blocked {
-  overflow: hidden !important;
-}
-
-.clear {
-  clear: both;
-}
-
-// Interaction
-.disable {
-  user-select: none;
-}
-
-.deactivate {
-  pointer-events: none;
-}
-
 // Visibility
 .hidden {
   display: none !important;
-}
-
-.occult {
-  opacity: 0 !important;
 }
 
 // HTML
