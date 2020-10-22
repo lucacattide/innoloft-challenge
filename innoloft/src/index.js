@@ -3,12 +3,14 @@
 // JS imports
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
+import Root from './components/Root';
 import * as serviceWorker from './serviceWorker';
+// SASS imports
+import './sass/index.scss';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Root />
   </React.StrictMode>,
   document.getElementById('root')
 );
