@@ -1,0 +1,63 @@
+// SCSS Start
+// Imports Start
+@import '../base';
+@import 'hacks';
+// Imports End
+
+// Profile
+.profile {
+  margin: 0 0 0 32px;
+
+  &,
+  &#{__container} .container__heading,
+  &#{__container} .container__heading .headling__link {
+    display: flex;
+  }
+
+  &,
+  &#{__container} .container__heading .headling__link {
+    flex: 0 0 50%;
+  }
+
+  &#{__container} {
+
+    @extend %container;
+
+    flex-direction: column;
+
+    .container__content,
+    .container__heading {
+      background-color: $white;
+    }
+
+    .container__heading {
+
+      @extend %font-bold;
+
+      .heading__link {
+        align-items: center;
+        color: $black;
+        flex: 0 0 50%;
+        transition: all .3s ease-in-out;
+
+        &:not(.active) {
+          background-color: $grey-1;
+        }
+
+        .link__title {
+
+          @extend %center;
+
+          font-size: $title;
+          text-transform: capitalize;
+        }
+      }
+
+      .active,
+      .heading__link:hover {
+        background-color: $white;
+      }
+    }
+  }
+}
+// SCSS End
