@@ -1,17 +1,55 @@
 // Module Start
 // JS imports
-import React from 'react';
+import clsx from 'clsx';
+import React, {useCallback} from 'react';
+import {
+  shallowEqual,
+  useSelector,
+  useDispatch
+} from 'react-redux';
+import * as actions from '../actions/menu';
 // SASS imports
 import '../sass/Header/header.scss';
 
 // Header
 const Header = () => {
+  const dispatch = useDispatch();
+  const {
+    active
+  } = useSelector(state => ({
+    active: state.menu.active
+  }), shallowEqual);
+  // Menu handler
+  const handleMenu = useCallback((status) => {
+    dispatch(actions.setActive(status));
+  }, [dispatch]);
+
   return (
     /* Header Start */
     <header className="header">
       <h6>Header</h6>
       {/* Container Start */}
       <div className="header__container">
+        {/* Hamburger Start */}
+        <button
+          className={clsx(
+            'container__hamburger',
+            'hamburger',
+            'hamburger--collapse',
+            {
+              ['is-active']: active
+            }
+          )}
+          type="button"
+          aria-label="Menu"
+          aria-controls="navigation"
+          onClick={() => handleMenu(!active)}
+        >
+          <span className="hamburger-box">
+            <span className="hamburger-inner"></span>
+          </span>
+        </button>
+        {/* Hamburger End */}
         {/* Logo Start */}
         <a className="container__link" href="https://innoloft.com/home" title="Innoloft" tabIndex={0} target="new">
           <aside className="link__logo">

@@ -6,6 +6,13 @@ $blue: #272e71;
 $grey: #f6f6f6;
 $grey-1: #D8D8D8;
 $white: #fff;
+// Hamburger
+$hamburger-padding-x: 16px !default;
+$hamburger-padding-y: 16px !default;
+$hamburger-layer-width: 24px !default;
+$hamburger-layer-height: 2px !default;
+$hamburger-layer-spacing: 4px !default;
+$hamburger-layer-color: $grey-1 !default;
 // Fonts
 $body: 'Open Sans', sans-serif;
 // Fonts - Dimensions
@@ -146,18 +153,18 @@ html {
       font-size: $font-size-desktop;
     }
 
-    /* &::-webkit-scrollbar,
+    &::-webkit-scrollbar,
     &::-webkit-scrollbar-track,
     &::-webkit-scrollbar-track-piece,
     &::-webkit-scrollbar-corner,
     &::-webkit-resizer {
-      background-color: $bianco;
+      background-color: $white;
     }
 
     &::-webkit-scrollbar-button,
     &::-webkit-scrollbar-thumb {
-      background-color: $blu;
-    } */
+      background-color: $blue;
+    }
 
     // Container
     .container {
@@ -166,6 +173,7 @@ html {
       height: auto;
       min-height: 100vh;
 
+      // Sticky footer workaround
       &#{__wrapper} {
         // This notation is a workaround for IE
         // See: https://github.com/philipwalton/flexbugs
