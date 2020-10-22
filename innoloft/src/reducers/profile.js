@@ -13,7 +13,7 @@ const initState = {
   }
 };
 // Form state reducer
-const form = createReducer(initState, {
+const profile = createReducer(initState, {
   [setTabs.type]: (state, action) => {
     const {tabs} = action.payload;
 
@@ -22,5 +22,5 @@ const form = createReducer(initState, {
 });
 
 // Module export
-export default form;
+export default profile;
 // Module End
