@@ -1,0 +1,116 @@
+// SCSS Start
+// Imports Start
+@import '../base';
+@import 'hacks';
+// Imports End
+
+// Form
+.form {
+
+  &#{__container} .container__form,
+  &#{__container} .container__form .form__fields,
+  &#{__container} .container__form .form__fields .fields__label {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &#{__container} .container__form {
+    margin: 2em auto;
+    width: 62%;
+
+    .form__actions .actions__button,
+    .form__fields .fields__label,
+    .form__fields .fields__label .label__field,
+    .form__indicator {
+      font-size: $text;
+    }
+
+    .form__fields .fields__label,
+    .form__fields .fields__label .label__field,
+    .form__indicator {
+
+      @extend %font;
+
+      color: $black;
+    }
+
+    .form__actions .actions__button,
+    .form__fields .fields__label .label__field {
+      transition: all .3s ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .form__fields .fields__label .label__field,
+    .form__indicator {
+      margin: 1em 0 0;
+    }
+
+    .form__actions {
+      margin: 3em 0 0;
+
+      .actions__button {
+
+        @extend %font-bold;
+
+        background-color: $blue;
+        border: 0;
+        color: $white;
+        padding: 1em 16px;
+        text-transform: uppercase;
+
+        &:hover {
+          background-color: $white;
+          color: $blue;
+        }
+      }
+    }
+
+    .form__indicator {
+
+      .indicator__label {
+        margin: 0 0 0 16px;
+        text-transform: capitalize;
+      }
+
+      .indicator__label--green {
+        color: green;
+      }
+
+      .indicator__label--red {
+        color: red;
+      }
+    }
+
+    .form__fields {
+      margin: 0 0 2em;
+
+      &#{--numbers} {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .fields__label {
+
+        &:hover .label__field {
+          border-color: $grey-1;
+        }
+
+        .label__error {
+          color: red;
+          margin: .5em 0 0;
+        }
+
+        .label__field {
+          border: 1px solid $blue;
+          border-radius: .5rem;
+          padding: 1em 16px;
+        }
+      }
+    }
+  }
+}
+
+// SCSS End
