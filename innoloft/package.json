@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Innoloft challenge",
   "private": true,
+  "license": "UNLICENSED",
   "dependencies": {
     "@reduxjs/toolkit": "^1.2.5",
     "@testing-library/jest-dom": "^4.2.4",
@@ -54,5 +55,10 @@
     "type": "git",
     "url": "https://gitlab.com/lucacattide/innoloft_frontend_application"
   },
+  "keywords": [
+    "innoloft",
+    "luca",
+    "cattide"
+  ],
   "author": "Luca Cattide - Senior Frontend Developer <info@lucacattide.dev> | LC (https://lucacattide.dev)"
 }
