@@ -1,32 +1,12 @@
 {
   "short_name": "Innoloft",
   "name": "Innoloft",
-  "icons": [
-    {
-      "src": "/img/favocon.ico",
-      "type": "image/x-icon",
-      "sizes": "48x48",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/img/favocon-16x16.png",
-      "type": "image/png",
-      "sizes": "16x16",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/img/favocon-32x32.png",
-      "type": "image/png",
-      "sizes": "32x32",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/img/favicon-180x180.png",
-      "type": "image/png",
-      "sizes": "180x180",
-      "purpose": "any maskable"
-    }
-  ],
+  "icons": [{
+    "src": "/img/favicon-180x180.png",
+    "type": "image/png",
+    "sizes": "180x180",
+    "purpose": "any maskable"
+  }],
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#272e71",
