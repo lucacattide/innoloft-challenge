@@ -71,7 +71,11 @@
 
     .container__search {
       max-width: 480px;
-      width: 100%;
+
+      &,
+      .search__field {
+        width: 100%;
+      }
 
       .search__field {
 
