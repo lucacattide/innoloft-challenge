@@ -10,16 +10,21 @@
 
 ## FAQ
 
-Innoloft challenge.
+Innoloft challenge:
 
-## Improvements
+I put various comments around to clarify some of my choices.
+
+## Tools/Improvements
 
 - Code linting/formatting (ESLint/Prettier);
-- CSS pre-processing;
-- Service Worker:
+[//]: # (- Package building (Webpack);)
+- CSS pre-processing (SASS);
+- Service Worker (Workbox):
   - Caching;
   - Standalone download;
-- HTTP/2;
+- HTTP/2:
+  - Prefetching;
+  - Preloading;
 - SEO:
   - File naming conventions;
   - Meta tags;
