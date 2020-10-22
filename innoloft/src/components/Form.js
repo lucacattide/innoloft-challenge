@@ -536,7 +536,7 @@ const Form = (props) => {
                   Number *
                   <input
                     id="number"
-                    className="label__field"
+                    className="label__field label__field--number"
                     type="number"
                     name="number"
                     min="1"

@@ -6,6 +6,11 @@
 
 // Form
 .form {
+  padding: 0 16px;
+
+  @media ($media-desktop) {
+    padding: 0;
+  }
 
   &#{__container} .container__form,
   &#{__container} .container__form .form__fields,
@@ -16,7 +21,10 @@
 
   &#{__container} .container__form {
     margin: 2em auto;
-    width: 62%;
+
+    @media ($media-tablet) {
+      width: 62%;
+    }
 
     .form__actions .actions__button,
     .form__fields .fields__label,
@@ -49,7 +57,14 @@
     }
 
     .form__actions {
+
+      @extend %center;
+
       margin: 3em 0 0;
+
+      @media ($media-desktop) {
+        text-align: left;
+      }
 
       .actions__button {
 
@@ -88,8 +103,19 @@
       margin: 0 0 2em;
 
       &#{--numbers} {
-        flex-direction: row;
-        justify-content: space-between;
+
+        @media ($media-tablet) {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        @media ($media-desktop) {
+          flex-direction: column;
+        }
+
+        @media (min-width: 1440px) {
+          flex-direction: row;
+        }
       }
 
       .fields__label {
@@ -107,6 +133,18 @@
           border: 1px solid $blue;
           border-radius: .5rem;
           padding: 1em 16px;
+        }
+
+        .label__field--number {
+          margin: 2em 0;
+
+          @media ($media-tablet) {
+            margin: 1em 16px 1em 0;
+          }
+
+          @media ($media-desktop) {
+            margin: 1em 0;
+          }
         }
       }
     }
