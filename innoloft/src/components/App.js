@@ -1,21 +1,38 @@
 // Module Start
 // JS imports
 import React from 'react';
+import {
+  shallowEqual,
+  useSelector
+} from 'react-redux';
+import Header from './Header';
+import Notification from './Notification';
+import Menu from './Menu';
+import Profile from './Profile';
 // SASS imports
-import '../scss/App.scss';
+import '../sass/App/app.scss';
 
-/**
- * @description Main app
- * @author Luca Cattide
- * @date 2020-10-19
- * @returns
- */
+// App
 const App = () => {
+  const {
+    notification
+  } = useSelector(state => ({
+    notification: state.form.notification
+  }), shallowEqual);
+
   return (
-    <div className="App">
-    </div>
+    <>
+      <Header />
+      <Notification message={notification} />
+      <div className="app">
+        <div className="app__container">
+          <Menu />
+          <Profile />
+        </div>
+      </div>
+    </>
   );
-}
+};
 
 // Module export
 export default App;

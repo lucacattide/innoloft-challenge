@@ -1,0 +1,21 @@
+// SCSS Start
+// Imports Start
+@import '../base';
+@import 'hacks';
+// Imports End
+
+// App
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &#{__container} {
+
+    @extend %container;
+
+    justify-content: flex-start;
+    margin: 3em 0;
+  }
+}
+// SCSS End

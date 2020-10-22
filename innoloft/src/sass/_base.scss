@@ -1,0 +1,184 @@
+// SASS Start
+// Variables Start
+// Colors
+$black: #445063;
+$blue: #272e71;
+$grey: #f6f6f6;
+$grey-1: #D8D8D8;
+$white: #fff;
+// Fonts
+$body: 'Open Sans', sans-serif;
+// Fonts - Dimensions
+$font-size-desktop: 14px;
+$font-size-mobile: 12px;
+$font-size-rem: 62.5%;
+$list: 1.4rem;
+$line-text: 2.2rem;
+$text: 1.6rem;
+$title: 2.2rem;
+// Resolutions
+$desktop: 992px;
+$desktop-hd: 1200px;
+$tablet: 768px;
+$smartphone: 576px;
+// Media Queries
+$media-desktop: 'min-width: #{$desktop}';
+$media-desktop-hd: 'min-width: #{$desktop-hd}';
+$media-tablet: 'min-width: #{$tablet}';
+$media-smartphone: 'min-width: #{$smartphone}';
+$media-local: 'display-mode: standalone';
+
+// Classes
+%cover,
+%background,
+%sprites {
+
+  @extend %background-base;
+}
+
+%background {
+  background-position: 0 0;
+  background-size: 100%;
+}
+
+%background-base {
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+}
+
+%center {
+  text-align: center;
+}
+
+%container {
+  display: flex;
+  justify-content: space-between;
+  // Boxed-view to resemble the Innoloft prototype website (different from mockup)
+  max-width: 1440px;
+  width: 100%;
+}
+
+%cover {
+  background-position: center;
+  background-size: cover;
+}
+
+%font {
+  font-family: $body;
+}
+
+%font-bold {
+
+  @extend %font;
+
+  font-weight: bold;
+}
+
+%image {
+  height: auto;
+  width: 100%;
+}
+
+%uppercase {
+  text-transform: uppercase;
+}
+
+// General
+// Links
+a {
+  text-decoration: none !important;
+}
+
+a:active a:focus {}
+
+// Outline
+a:focus,
+button,
+input:focus,
+.btn:focus {
+  outline: none !important;
+}
+
+// Buttons
+input[type='submit'] {
+  appearance: none !important;
+  border-radius: 0 !important;
+}
+
+// Layout
+.blocked {
+  overflow: hidden !important;
+}
+
+.clear {
+  clear: both;
+}
+
+// Interaction
+.disable {
+  user-select: none;
+}
+
+.deactivate {
+  pointer-events: none;
+}
+
+// Visibility
+.hidden {
+  display: none !important;
+}
+
+.occult {
+  opacity: 0 !important;
+}
+
+// HTML
+html {
+  font-size: $font-size-rem;
+
+  // Body
+  body {
+    background-color: $grey;
+    font-size: $font-size-mobile;
+    margin: 0;
+
+    @media ($media-tablet) {
+      font-size: $font-size-desktop;
+    }
+
+    /* &::-webkit-scrollbar,
+    &::-webkit-scrollbar-track,
+    &::-webkit-scrollbar-track-piece,
+    &::-webkit-scrollbar-corner,
+    &::-webkit-resizer {
+      background-color: $bianco;
+    }
+
+    &::-webkit-scrollbar-button,
+    &::-webkit-scrollbar-thumb {
+      background-color: $blu;
+    } */
+
+    // Container
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      min-height: 100vh;
+
+      &#{__wrapper} {
+        // This notation is a workaround for IE
+        // See: https://github.com/philipwalton/flexbugs
+        -webkit-box-flex: 1 0 0;
+        -ms-flex: 1 0 0;
+        flex: 1 0 0;
+      }
+    }
+
+    h6 {
+      display: none;
+    }
+  }
+}
+
+// Fine SCSS
