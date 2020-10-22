@@ -24,9 +24,6 @@ In addition to the main specifications:
 - CSS pre-processing (SASS);
 - Webfonts (Google Fonts, Font Awesome);
 - Data fetching (Isomorphic Unfetch);
-- Service Worker (Workbox):
-  - Caching;
-  - Standalone download;
 - HTTP/2:
   - Prefetching;
   - Preloading;
