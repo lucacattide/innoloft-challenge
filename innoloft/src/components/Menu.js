@@ -1,11 +1,22 @@
 // Module Start
 // JS imports
+import clsx from 'clsx';
 import React from 'react';
+import {
+  shallowEqual,
+  useSelector
+} from 'react-redux';
 // SASS imports
 import '../sass/Menu/menu.scss';
 
 // Menu
 const Menu = () => {
+  const {
+    active
+  } = useSelector(state => ({
+    active: state.menu.active
+  }), shallowEqual);
+
   return (
     /* Menu Start */
     <aside className="menu">
@@ -13,7 +24,12 @@ const Menu = () => {
       {/* Navigation Start */}
       <nav className="menu__main">
         <h6>Voices</h6>
-        <ul className="main__list">
+        <ul className={clsx(
+          'main__list',
+          {
+            ['active']: active
+          }
+        )}>
           <li className="list__voice">
             <a className="voice__link" href="#" title="Home - Innoloft" tabIndex={10}>
               <span className="link__icon">
