@@ -1,3 +1,35 @@
 // SCSS Start
 // Browser Hacks
+// Firefox
+@-moz-document url-prefix() {
+
+  .form__fields--numbers {
+
+    @media ($media-tablet) {
+      flex-direction: column !important;
+    }
+
+    @media (min-width: 1440px) {
+      flex-direction: row !important;
+    }
+
+    .fields__label {
+
+      .label__field {
+
+        @media (min-width: 1440px) {
+          width: calc(100% - 48px);
+        }
+      }
+
+      .label__field--number {
+
+        @media ($media-tablet) {
+          margin: 1em 0 !important;
+        }
+      }
+    }
+  }
+}
+
 // SCSS End
