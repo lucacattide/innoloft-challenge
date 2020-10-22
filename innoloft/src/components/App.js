@@ -6,6 +6,7 @@ import {
   useSelector
 } from 'react-redux';
 import Header from './Header';
+import Footer from './Footer';
 import Notification from './Notification';
 // SASS imports
 import '../sass/App/app.scss';
@@ -20,13 +21,16 @@ const App = (props) => {
 
   return (
     <>
-      <Header />
-      <Notification message={notification} />
-      <div className="app">
-        <div className="app__container">
-          {props.children}
+      <div className="container">
+        <Header />
+        <Notification message={notification} />
+        <div className="app">
+          <div className="app__container">
+            {props.children}
+          </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

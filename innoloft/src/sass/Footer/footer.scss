@@ -1,0 +1,16 @@
+// SCSS Start
+// Imports Start
+@import '../base';
+// Imports End
+
+// Footer
+.footer {
+
+  @extend %center;
+  @extend %font;
+
+  color: $black;
+  font-size: $text;
+  padding: 1em 16px;
+}
+// SCSS End
