@@ -7,12 +7,24 @@
 // App
 .app {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  padding: 0 16px;
+
+  @media ($media-desktop) {
+    padding: 0;
+  }
+
+  &,
+  &#{__container} {
+    flex-direction: column;
+  }
 
   &#{__container} {
 
     @extend %container;
+    @media ($media-desktop) {
+      flex-direction: row;
+    }
 
     justify-content: flex-start;
     margin: 3em 0;
