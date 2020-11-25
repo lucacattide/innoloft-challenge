@@ -22,9 +22,9 @@ function checkStatus(response) {
     const error = new Error(response.statusText);
 
     return Promise.reject(error);
-  } else {
-    return Promise.resolve(response);
   }
+
+  return Promise.resolve(response);
 }
 
 // Module export
