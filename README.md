@@ -23,7 +23,7 @@ You are developing a new dashboard. Your task is to create a new dashboard with 
 Of course, it is not supposed to be complete. We would like to limit ourselves to just one excerpt.
 
 In this scenario, the form used to modify the user profile information has to be created.
-The form contains two tabs, as specified below and shown in the mockup.
+The form contains two tabs, as specified below and shown in the [mockup](./mockup.jpg).
 
 The user wants to be able to switch between the two tabs and to enter the following information:
 
