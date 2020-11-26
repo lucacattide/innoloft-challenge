@@ -4,17 +4,14 @@ import { createAction } from '@reduxjs/toolkit';
 
 // Actions
 // Tabs setter
-const setTabs = createAction('profile/setTabs',
-function prepare(tabs) {
+const setTabs = createAction('profile/setTabs', function prepare(tabs) {
   return {
     payload: {
-      tabs
-    }
+      tabs,
+    },
   };
 });
 
 // Module export
-export {
-  setTabs
-};
+export { setTabs };
 // Module End

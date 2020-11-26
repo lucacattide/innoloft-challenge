@@ -2,21 +2,16 @@
 // JS imports
 import React from 'react';
 import { Provider } from 'react-redux';
-import {
-  configureStore,
-  getDefaultMiddleware
-} from '@reduxjs/toolkit';
+import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import appReducer from '../reducers/index';
 import App from './App';
 import Menu from './Menu';
 import Profile from './Profile';
 
 // App store instantiation
-const store = configureStore({
+export const store = configureStore({
   reducer: appReducer,
-  middleware: [
-    ...getDefaultMiddleware()
-  ]
+  middleware: [...getDefaultMiddleware()],
 });
 // Root
 const Root = () => {

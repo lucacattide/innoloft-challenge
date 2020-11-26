@@ -6,11 +6,7 @@ import '../sass/Footer/footer.scss';
 
 // Footer
 const Footer = () => {
-  return (
-    <footer className="footer">
-      ©2020 Innoloft GmbH
-    </footer>
-  );
+  return <footer className="footer">©2020 Innoloft GmbH</footer>;
 };
 
 // Module export

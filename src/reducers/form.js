@@ -6,7 +6,7 @@ import {
   setData,
   setStrength,
   setException,
-  setNotification
+  setNotification,
 } from '../actions/form';
 
 // State initialization
@@ -21,58 +21,58 @@ const initState = {
     street: '',
     number: 0,
     zip: 0,
-    country: ''
+    country: '',
   },
   strength: 'weak',
   exception: {
-    'email': {
+    email: {
       error: false,
-      message: ''
+      message: '',
     },
-    'firstName': {
+    firstName: {
       error: false,
-      message: ''
+      message: '',
     },
-    'lastName': {
+    lastName: {
       error: false,
-      message: ''
+      message: '',
     },
-    'password': {
+    password: {
       error: false,
-      message: ''
+      message: '',
     },
-    'passwordConfirm': {
+    passwordConfirm: {
       error: false,
-      message: ''
+      message: '',
     },
-    'street': {
+    street: {
       error: false,
-      message: ''
+      message: '',
     },
-    'number': {
+    number: {
       error: false,
-      message: ''
+      message: '',
     },
-    'zip': {
+    zip: {
       error: false,
-      message: ''
+      message: '',
     },
-    'country': {
+    country: {
       error: false,
-      message: ''
-    }
+      message: '',
+    },
   },
-  notification: ''
+  notification: '',
 };
 // Form state reducer
 const form = createReducer(initState, {
   [setEdit.type]: (state, action) => {
-    const {edit} = action.payload;
+    const { edit } = action.payload;
 
     state.edit = edit;
   },
   [setData.type]: (state, action) => {
-    const {data} = action.payload;
+    const { data } = action.payload;
 
     state.data.email = data.email;
     state.data.password = data.password;
@@ -85,20 +85,20 @@ const form = createReducer(initState, {
     state.data.country = data.country;
   },
   [setStrength.type]: (state, action) => {
-    const {strength} = action.payload;
+    const { strength } = action.payload;
 
     state.strength = strength;
   },
   [setException.type]: (state, action) => {
-    const {id, error} = action.payload;
+    const { id, error } = action.payload;
 
     state.exception[id] = error;
   },
   [setNotification.type]: (state, action) => {
-    const {notification} = action.payload;
+    const { notification } = action.payload;
 
     state.notification = notification;
-  }
+  },
 });
 
 // Module export

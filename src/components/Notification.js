@@ -9,12 +9,11 @@ import '../sass/Notification/notification.scss';
 // Notification
 const Notification = (props) => {
   return (
-    <aside className={clsx(
-      'notification',
-      {
-        ['active']: props.message
-      }
-    )}>
+    <aside
+      className={clsx('notification', {
+        active: props.message,
+      })}
+    >
       <h2 className="notification__title">{props.message}</h2>
     </aside>
   );
@@ -22,7 +21,7 @@ const Notification = (props) => {
 
 // Properties validation
 Notification.propTypes = {
-  message: PropTypes.string.isRequired
+  message: PropTypes.string.isRequired,
 };
 
 // Module export

@@ -8,9 +8,9 @@ import form from './form';
 // Reducers
 // Module export
 const appReducer = combineReducers({
-  menu: menu,
-  profile: profile,
-  form: form
+  menu,
+  profile,
+  form,
 });
 
 // Module export

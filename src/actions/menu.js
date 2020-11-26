@@ -4,17 +4,14 @@ import { createAction } from '@reduxjs/toolkit';
 
 // Actions
 // Menu setter
-const setActive = createAction('menu/setActive',
-function prepare(active) {
+const setActive = createAction('menu/setActive', function prepare(active) {
   return {
     payload: {
-      active
-    }
+      active,
+    },
   };
 });
 
 // Module export
-export {
-  setActive
-};
+export { setActive };
 // Module End

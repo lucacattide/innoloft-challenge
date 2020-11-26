@@ -1,12 +1,8 @@
 // Module Start
 // JS imports
 import clsx from 'clsx';
-import React, {useCallback} from 'react';
-import {
-  shallowEqual,
-  useSelector,
-  useDispatch
-} from 'react-redux';
+import React, { useCallback } from 'react';
+import { shallowEqual, useSelector, useDispatch } from 'react-redux';
 import * as actions from '../actions/menu';
 // SASS imports
 import '../sass/Header/header.scss';
@@ -14,15 +10,19 @@ import '../sass/Header/header.scss';
 // Header
 const Header = () => {
   const dispatch = useDispatch();
-  const {
-    active
-  } = useSelector(state => ({
-    active: state.menu.active
-  }), shallowEqual);
+  const { active } = useSelector(
+    (state) => ({
+      active: state.menu.active,
+    }),
+    shallowEqual,
+  );
   // Menu handler
-  const handleMenu = useCallback((status) => {
-    dispatch(actions.setActive(status));
-  }, [dispatch]);
+  const handleMenu = useCallback(
+    (status) => {
+      dispatch(actions.setActive(status));
+    },
+    [dispatch],
+  );
 
   return (
     /* Header Start */
@@ -37,8 +37,8 @@ const Header = () => {
             'hamburger',
             'hamburger--collapse',
             {
-              ['is-active']: active
-            }
+              'is-active': active,
+            },
           )}
           type="button"
           aria-label="Menu"
@@ -46,12 +46,18 @@ const Header = () => {
           onClick={() => handleMenu(!active)}
         >
           <span className="hamburger-box">
-            <span className="hamburger-inner"></span>
+            <span className="hamburger-inner" />
           </span>
         </button>
         {/* Hamburger End */}
         {/* Logo Start */}
-        <a className="container__link" href="https://innoloft.com/home" title="Innoloft" tabIndex={0} target="new">
+        <a
+          className="container__link"
+          href="https://innoloft.com/home"
+          title="Innoloft"
+          tabIndex={0}
+          target="new"
+        >
           <aside className="link__logo">
             {/* Image Replacement */}
             <h6>Innoloft</h6>
@@ -75,17 +81,17 @@ const Header = () => {
             <li className="list__voice">
               <button className="voice__button">
                 <span className="button__label">EN</span>
-                <i className="fas fa-sort-down"></i>
+                <i className="fas fa-sort-down" />
               </button>
             </li>
             <li className="list__voice">
               <button className="voice__button">
-                <i className="far fa-bell"></i>
+                <i className="far fa-bell" />
               </button>
             </li>
             <li className="list__voice">
               <button className="voice__button">
-                <i className="fas fa-user-circle"></i>
+                <i className="fas fa-user-circle" />
               </button>
             </li>
           </ul>

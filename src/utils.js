@@ -18,7 +18,7 @@ const patternPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[.-_@$!%*?&])[A-Za-
  * @returns
  */
 function checkStatus(response) {
-  if ((response.status !== 200)) {
+  if (response.status !== 200) {
     const error = new Error(response.statusText);
 
     return Promise.reject(error);
@@ -28,10 +28,5 @@ function checkStatus(response) {
 }
 
 // Module export
-export {
-  patternText,
-  patternEmail,
-  patternPassword,
-  checkStatus
-};
+export { patternText, patternEmail, patternPassword, checkStatus };
 // Module End
