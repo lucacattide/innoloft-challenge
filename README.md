@@ -102,7 +102,7 @@ Bonus points would be awarded for setting up and using linters (eslint, stylelin
     - robots.txt
     - Sitemap
 - The main layout is boxed in order to resemble the official prototype website - which is currently different from the provided mockup
-- Protocols are omitted in ```src``` paths as general best-practice to support both URLs with/without SSL
+- Protocols are omitted in `src` paths as general best-practice to support both URLs with/without SSL
 
 More details are indicated inside the code comments - where needed. For any further in-depth consideration, please contact me on info@lucacattide.dev or feel free to open an issue.
 
@@ -131,9 +131,15 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+To run the tests with code coverage report:
+
+```
+npm test --coverage
+```
+
 #### Code Coverage
 
-![Branches](./coverage/badge-branches.svg "Coverage - Branches") ![Branches](./coverage/badge-functions.svg "Coverage - Functions") ![Branches](./coverage/badge-lines.svg "Coverage - Lines") ![Branches](./coverage/badge-statements.svg "Coverage - Statements")
+![Branches](./coverage/badge-branches.svg 'Coverage - Branches') ![Branches](./coverage/badge-functions.svg 'Coverage - Functions') ![Branches](./coverage/badge-lines.svg 'Coverage - Lines') ![Branches](./coverage/badge-statements.svg 'Coverage - Statements')
 
 #### `npm run build`
 
